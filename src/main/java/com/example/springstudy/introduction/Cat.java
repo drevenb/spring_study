@@ -1,7 +1,4 @@
-package com.example.springstudy;
-
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
+package com.example.springstudy.introduction;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

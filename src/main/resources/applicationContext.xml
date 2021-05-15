@@ -11,14 +11,14 @@
 
     <bean
         id="myPet"
-        class="com.example.springstudy.Dog"
+        class="com.example.springstudy.introduction.Dog"
         scope="prototype"
         init-method="init"
         destroy-method="destroy">
     </bean>
 
     <bean id="myPerson"
-          class="com.example.springstudy.Person">
+          class="com.example.springstudy.introduction.Person">
         <property name="pet" ref="myPet"/>
         <property name="name" value="${person.name}"/>
         <property name="age" value="${person.age}"/>

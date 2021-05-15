@@ -1,4 +1,4 @@
-package com.example.springstudy;
+package com.example.springstudy.introduction;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
