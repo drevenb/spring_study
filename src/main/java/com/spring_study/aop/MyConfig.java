@@ -1,11 +1,11 @@
-package com.example.springstudy.aop;
+package com.spring_study.aop;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
-@ComponentScan("com.example.springstudy.aop")
+@ComponentScan("com.spring_study.aop")
 @EnableAspectJAutoProxy
 public class MyConfig {
 }

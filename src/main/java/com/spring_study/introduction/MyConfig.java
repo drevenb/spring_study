@@ -1,4 +1,4 @@
-package com.example.springstudy.introduction;
+package com.spring_study.introduction;
 
 import org.springframework.context.annotation.*;
 

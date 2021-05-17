@@ -1,10 +1,12 @@
-package com.example.springstudy.introduction;
+package com.spring_study.introduction;
 
 import org.springframework.beans.factory.annotation.Value;
 
 //@Component
 public class Person {
 
+//    @Autowired
+//    @Qualifier("dog")
     private Pet pet;
 
     @Value("${person.name}")
