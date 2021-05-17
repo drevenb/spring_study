@@ -9,4 +9,10 @@ import org.springframework.stereotype.Component;
 public class Book {
     @Value("Harry Potter")
     private String name;
+
+    @Value("Rolling Stone")
+    private String author;
+
+    @Value("2015")
+    private int publicationYear;
 }

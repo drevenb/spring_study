@@ -21,7 +21,7 @@ public class SchoolLibrary extends AbstractLibrary {
         System.out.println("We are returning a magazine to SchoolLibrary\n");
     }
 
-    public void addBook() {
+    public void addBook(String personName, Book book) {
         System.out.println("We are adding a book to SchoolLibrary\n");
     }
 

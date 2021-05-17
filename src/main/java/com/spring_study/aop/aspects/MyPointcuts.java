@@ -10,7 +10,7 @@ public class MyPointcuts {
     @Pointcut("execution(* return*())")
     public void allReturnMethods() {}
 
-    @Pointcut("execution(* add*())")
+    @Pointcut("execution(* add*(..))")
     public void allAddMethods() {}
 
     @Pointcut("allGetMethods() || allReturnMethods()")
@@ -24,4 +24,13 @@ public class MyPointcuts {
 
     @Pointcut("allUniLibraryMethods() && !returnMagazineFromUniLibrary()")
     public void allMethodsFromUniLibraryExceptReturnMagazine() {}
+
+    @Pointcut("execution(* com.spring_study.aop.SchoolLibrary.get*(..)) ")
+    public void allGetFromSchoolLibrary()  {}
+
+    @Pointcut("execution(* com.spring_study.aop.UniLibrary.get*(..)) ")
+    public void allGetFromUniLibrary()  {}
+
+    @Pointcut("allGetFromSchoolLibrary() || allGetFromUniLibrary()")
+    public void allGetFromSchoolAndUniLibrary() {}
 }

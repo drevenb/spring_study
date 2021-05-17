@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Order(20)
 public class SecurityAspect {
 
-    @Before("com.spring_study.aop.aspects.MyPointcuts.allGetMethods()")
+    @Before("com.spring_study.aop.aspects.MyPointcuts.allGetFromSchoolAndUniLibrary()")
     public void beforeGetSecurityAdvice() {
         System.out.println("beforeGetSecurityAdvice: writing Log #20");
     }
