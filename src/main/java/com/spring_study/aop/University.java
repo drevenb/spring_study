@@ -19,7 +19,7 @@ public class University {
 
     public List<Student> getAllStudents() {
         System.out.println("Start of the getStudents()");
-        System.out.println(students.get(3));
+//        System.out.println(students.get(3));
         System.out.println("Information about students: ");
         System.out.println(students);
         return students;
