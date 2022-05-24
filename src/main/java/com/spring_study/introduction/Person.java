@@ -1,6 +1,8 @@
 package com.spring_study.introduction;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 //@Component
 public class Person {
@@ -15,8 +17,12 @@ public class Person {
     @Value("${person.age}")
     private int age;
 
-    public Person(Pet pet) {
+    public Person(@Qualifier("dog") Pet pet) {
         this.pet = pet;
+    }
+
+    public Person() {
+
     }
 
     public void callPet() {

@@ -3,7 +3,7 @@ package com.spring_study.introduction;
 import org.springframework.context.annotation.*;
 
 @Configuration
-//@ComponentScan("com.example.springstudy")
+//@ComponentScan("com.example.spring_study")
 @PropertySource("classpath:application.properties")
 public class MyConfig {
 

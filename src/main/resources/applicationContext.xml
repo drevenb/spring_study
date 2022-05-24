@@ -2,12 +2,25 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context.xsd">
+    http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
     <context:property-placeholder location="application.properties"/>
+
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+    <bean class="com.spring_study.introduction.InjectRandomIntAnnotationBeanPostProcessor"/>
+
+    <bean class="com.spring_study.introduction.TerminatorQuoter" id="terminatorQuoter"
+        c:message-ref="message">
+<!--        <property name="message" value="This is a quote"/>-->
+    </bean>
+
+    <bean id="message" class="java.lang.String"
+        c:_0="This is a message"/>
 
     <bean
         id="myPet"
@@ -24,4 +37,19 @@
         <property name="age" value="${person.age}"/>
 <!--        <constructor-arg ref="myPet"/>-->
     </bean>
+
+    <bean id="testClass" class="com.spring_study.introduction.TestClass" scope="prototype"/>
+
+    <bean id="collectionClass" class="com.spring_study.introduction.CollectionClass"/>
+
+    <util:map id="map" map-class="java.util.HashMap">
+        <entry key="first" value-ref="testClass"/>
+        <entry key="second" value-ref="testClass"/>
+    </util:map>
+    <util:list id="list" list-class="java.util.LinkedList">
+        <value>first object</value>
+        <ref bean="testClass"/>
+        <value>third object</value>
+        <ref bean="testClass"/>
+    </util:list>
 </beans>

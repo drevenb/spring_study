@@ -1,4 +1,4 @@
-package com.spring_study.hibernate_test.entity;
+package com.spring_study.hibernate_test2.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,6 +26,10 @@ public class Employee {
 
     @Column
     private int salary;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="detail_id")
+    private Detail empDetail;
 
     public Employee(String name, String surname, String department, int salary) {
         this.name = name;
