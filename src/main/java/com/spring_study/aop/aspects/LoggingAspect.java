@@ -13,20 +13,20 @@ import org.springframework.stereotype.Component;
 @Order(10)
 public class LoggingAspect {
 
-    @Before("com.spring_study.aop.aspects.MyPointcuts.allMethodsFromUniLibraryExceptReturnMagazine()")
-    public void beforeAllMethodsFromUniLibraryExceptReturnMagazine() {
-        System.out.println("beforeAllMethodsFromUniLibraryExceptReturnMagazine: writing Log #10");
-    }
+//    @Before("com.spring_study.aop.aspects.MyPointcuts.allMethodsFromUniLibraryExceptReturnMagazine()")
+//    public void beforeAllMethodsFromUniLibraryExceptReturnMagazine() {
+//        System.out.println("beforeAllMethodsFromUniLibraryExceptReturnMagazine: writing Log #10");
+//    }
 
     @Before("com.spring_study.aop.aspects.MyPointcuts.allGetFromSchoolAndUniLibrary()")
     public void beforeGetLoggingAdvice() {
         System.out.println("beforeGetBookAdvice: writing Log #1");
     }
 
-    @Before("com.spring_study.aop.aspects.MyPointcuts.allReturnMethods()")
-    public void beforeReturnLoggingAdvice() {
-        System.out.println("beforeReturnLoggingAdvice: writing Log #2");
-    }
+//    @Before("com.spring_study.aop.aspects.MyPointcuts.allReturnMethods()")
+//    public void beforeReturnLoggingAdvice() {
+//        System.out.println("beforeReturnLoggingAdvice: writing Log #2");
+//    }
 
     @Before("com.spring_study.aop.aspects.MyPointcuts.allGetFromSchoolAndUniLibrary()")
     public void beforeGetAndReturnAdvice() {
