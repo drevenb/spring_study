@@ -1,4 +1,4 @@
-package com.spring_study.hibernate_test2.entity;
+package com.spring_study.hibernate_one_to_one.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
