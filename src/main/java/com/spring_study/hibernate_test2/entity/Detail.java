@@ -1,6 +1,5 @@
 package com.spring_study.hibernate_test2.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -26,6 +25,10 @@ public class Detail {
     @Column
     @Email
     private String email;
+
+    @OneToOne(mappedBy = "empDetail",
+                cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
+    private Employee employee;
 
     public Detail(String city, String phone, String email) {
         this.city = city;
