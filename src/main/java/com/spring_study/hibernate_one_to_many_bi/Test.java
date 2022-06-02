@@ -61,15 +61,12 @@ public class Test {
             session.beginTransaction();
 
             Department department = session.get(Department.class, 1);
-            Employee employee = session.get(Employee.class, 1);
-
-            System.out.println(employee);
-            System.out.println(employee.getDepartment());
-
             System.out.println(department);
-            System.out.println(department.getEmps());
+            department.getEmps().get(0);
 
             session.getTransaction().commit();
+
+            System.out.println(department.getEmps());
 
         } finally {
             session.close();
